@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first vue project</title>
+</head>
+<body>
+    <div id="app">
+        <p> Counter: {{ counter }} </p>
+        <button v-on:click="addCounter">add to counter</button>
+        <button @click="minusCounter">minus counter</button>
+
+         <p>input value: {{ value }} </p>
+         <input type="text" @keyup="showValue">
+         <p>clientX: {{ clientX }} </p>
+         <input type="text" @mousemove="showClientX">
+         <button @click="showParam('2')">show value</button>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue ({
+            el: "#app",
+            data: {
+                counter : 0,
+                name: "app",
+                family: "vue",
+                value: "",
+                clientX: 0
+            },
+            methods: {
+                addCounter: function() {
+                    this.counter++
+                },
+                minusCounter: function() {
+                    if(this.counter <= 0){
+                        this.counter = 0
+                        return false;
+                    }
+                    this.counter--
+                },
+                showValue : function(event) {
+                    this.value = event.target.value
+                },
+                showClientX : function(event) {
+                    this.clientX = event.clientX
+                },
+                showParam : function(funcParam) {
+                    alert(funcParam)
+                }
+            }
+        });
+    </script>
+</body>
+</html>
