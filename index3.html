@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style binding
+    </title>
+</head>
+<body>
+    <div id="app">
+       <button @click="a++">a++</button>
+       <button @click="b++">b++</button>
+
+       <p>A=> {{a}}</p>
+       <p>B=> {{b}}</p>
+
+       <p>main + a = {{mainPlusA()}}</p>
+       <p>main + b = {{mainPlusB()}}</p>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue ({
+            el: "#app",
+            data: {
+                main:10,
+                a:0,
+                b:0
+            },
+            methods: {
+                mainPlusA: function(){
+                    return this.main + this.a
+                },
+                mainPlusB: function(){
+                    return this.main + this.b
+                },
+            },
+            computed: {
+                mainPlusA: function(){
+                    return this.main + this.a
+                },
+                mainPlusB: function(){
+                    return this.main + this.b
+                },
+            }
+        })
+    </script>
+</body>
+</html>

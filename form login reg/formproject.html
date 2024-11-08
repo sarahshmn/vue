@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/signin form</title>
+</head>
+<body>
+    <!-- <div id="forms">
+        <form id="msform">
+            <template v-if="!loginForm">
+                <fieldset id="createAccount">
+                    <h2 class="fs-title">create your Account</h2>
+                    <input type="text" placeholder="UserName">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Confirm Password">
+                    <input type="button" value="Create" class="next action-button">
+                    <input 
+                    type="button"
+                    value="login"
+                    @click="loginForm = true"
+                    class="next action-button"
+                    style="background-color: rgb(211, 86, 86);"
+                    >
+                </fieldset>
+            </template>
+            <template v-else>
+                <fieldset id="login">
+                    <h2 class="fs-title">login</h2>
+                    <input type="text" placeholder="UserName">
+                    <input type="text" placeholder="Password">
+                    <input type="button" placeholder="previous action-button" value="Login">
+                    <input 
+                    type="button"
+                    value="Create Account"
+                    @click="loginForm = false"
+                    class="action-button"
+                    style="background-color: rgb(211, 86, 86);"
+                    >
+                </fieldset>
+            </template>
+        </form>
+    </div> -->
+    <hr>
+    <ul id="app">
+        <li v-for="framework in frameworks">{{framework}}</li>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

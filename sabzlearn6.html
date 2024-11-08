@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show pass</title>
+</head>
+<body>
+    <!-- <div id="app">
+        <h1>{{ link }}</h1>
+        <a :href="link">sabzlearn</a>
+
+        <div v-html="myTag"></div>
+        <input type="text" placeholder="دنبال چه میگردید؟" v-model="value">
+        <br>
+        {{ value }}
+    </div> -->
+    <div id="parent">
+        <button @click="counter++">add to counter</button>
+        <p>
+            {{counter}}
+        </p>
+        <p v-if="counter < 10"> مقدار متغیر کمتر از 10 است </p>
+        <p v-else>مقدار متغیر بیشتر از 10 است</p>
+        <hr>
+        <p v-if="weather == 'rainy'"> هوا بارانی است. </p>
+        <p v-else-if="weather == 'sunny'">هوا آفتابی است.</p>
+        <p v-else>هوا ابری است.</p>
+        <button @click="weather = 'sunny'">change weather!</button>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue(
+        //     {
+        //     el: "#app",
+        //     data: {
+        //         link : "https://constroject.com",
+        //         myTag: "<h1> welcome to Constroject! </h1>",
+        //         value: "search for..."
+        //     }
+        // },
+        {
+            el: "#parent",
+            data: {
+                counter:0,
+                weather: 'rainy',
+            }
+        }
+    )
+
+        new Vue
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+.color-box {
+    width: 120px ;
+    height: 120px;
+    float: right;
+    margin-right: 10px;
+}
+
+#yellow {
+    background-color: yellow;
+
+}
+
+#red{
+    background-color: red;
+}
+#blue {
+    background-color: blue;
+
+}
+
+#img {
+    width: 200px;
+    height: 200px;
+    background-image: url(yellow.jpg);
+}

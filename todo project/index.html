@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo
+    </title>
+</head>
+<body dir="rtl">
+   <div id="app">
+    <input type="text" placeholder="وظیفه جدیدی ایجاد کنید" v-model="newTodo">
+    <button @click="addTodo()">add to do</button>
+    <ul>
+        <li v-for="todo in todos" style="list-style: none;">
+            {{todo}} <button @click="removeTodo(index)" >حذف</button>
+        </li>
+    </ul>
+   </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
